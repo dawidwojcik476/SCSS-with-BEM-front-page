@@ -1,0 +1,8 @@
+@import './header';
+@import './main';
+
+@mixin desktop {
+    @media (min-width: 900px) {
+        @content;
+    }
+}

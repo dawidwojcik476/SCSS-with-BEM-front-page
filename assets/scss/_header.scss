@@ -1,0 +1,171 @@
+@mixin desktop {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    overflow-x: hidden;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 60px;
+    background-color: #292929;
+    padding: 0 14px;
+    @include desktop {
+        height: 106px;
+        padding: 0 5vw;
+    }
+    @media (min-width: 1600px) {
+        padding: 0 10vw;
+    }
+    
+
+
+    &__logo {
+        img {
+            height: 21px;
+            @media (min-width:768px){
+                height: 30px;
+            }
+    
+        }
+    }
+
+    &__hamburger {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        left: 5px;
+        @include desktop {
+            display: none;
+        }
+
+        .menu-burger {
+            width: 38px;
+            height: 2px;
+            background-color: white;
+            border-radius: 5px;
+            transition: all .5s ease-in-out;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 38px;
+                height: 2px;
+                background: white;
+                border-radius: 5px;
+                transition: all .5s ease-in-out;
+            }
+
+            &::before {
+                transform: translateY(-5px);
+            }
+
+            &::after {
+                transform: translateY(5px);
+            }
+
+
+        }
+
+        &.open {
+            .menu-burger {
+
+                transform: translateX(-50px);
+                background: transparent;
+
+                &::before {
+                    transform: rotate(45deg) translate(35px, -35px);
+                }
+
+                &::after {
+                    transform: rotate(-45deg) translate(35px, 35px);
+                }
+
+            }
+
+        }
+    }
+
+    &__nav {
+        visibility: hidden;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        transform: translateX(100vw);
+        transition: 0.5s ease all;
+        padding: 0 14px;
+        background-color: #292929;
+        height: 100vh;
+        width: 100vw;
+
+        @include desktop {
+            transform: translateX(0);
+            visibility: visible;
+            height: auto;
+            width: auto;
+            position: relative;
+            top:0;
+            background-color: transparent;
+
+        }
+
+        &.open {
+            transform: translateX(0);
+            visibility: visible;
+
+        }
+
+        .nav {
+            &__list {
+                margin-top: 15px;
+                list-style-type: none;
+                @include desktop {
+                    display: flex;
+                     margin-top: 0;
+                }
+
+                li {
+
+                    display: flex;
+                    height: 68px;
+                    align-items: center;
+                    @include desktop {
+                        margin-left: 55px;
+                    }
+                   
+
+
+                    a {
+                        font-family: 'PT Sans', sans-serif;
+                        color: white;
+                        font-size: 36px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        @include desktop {
+                            font-size: 18px;
+                            padding: 0 2px;
+                         }
+
+                        &:hover {
+                            border-bottom: 1px solid white;
+                            transition: 0.3 ease all;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

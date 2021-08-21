@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.container {
+  overflow-x: hidden; }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 60px;
+  background-color: #292929;
+  padding: 0 14px; }
+  @media (min-width: 900px) {
+    .header {
+      height: 106px;
+      padding: 0 5vw; } }
+  @media (min-width: 1600px) {
+    .header {
+      padding: 0 10vw; } }
+  .header__logo img {
+    height: 21px; }
+    @media (min-width: 768px) {
+      .header__logo img {
+        height: 30px; } }
+  .header__hamburger {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    left: 5px; }
+    @media (min-width: 900px) {
+      .header__hamburger {
+        display: none; } }
+    .header__hamburger .menu-burger {
+      width: 38px;
+      height: 2px;
+      background-color: white;
+      border-radius: 5px;
+      -webkit-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out; }
+      .header__hamburger .menu-burger::before, .header__hamburger .menu-burger::after {
+        content: '';
+        position: absolute;
+        width: 38px;
+        height: 2px;
+        background: white;
+        border-radius: 5px;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out; }
+      .header__hamburger .menu-burger::before {
+        -webkit-transform: translateY(-5px);
+                transform: translateY(-5px); }
+      .header__hamburger .menu-burger::after {
+        -webkit-transform: translateY(5px);
+                transform: translateY(5px); }
+    .header__hamburger.open .menu-burger {
+      -webkit-transform: translateX(-50px);
+              transform: translateX(-50px);
+      background: transparent; }
+      .header__hamburger.open .menu-burger::before {
+        -webkit-transform: rotate(45deg) translate(35px, -35px);
+                transform: rotate(45deg) translate(35px, -35px); }
+      .header__hamburger.open .menu-burger::after {
+        -webkit-transform: rotate(-45deg) translate(35px, 35px);
+                transform: rotate(-45deg) translate(35px, 35px); }
+  .header__nav {
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+    -webkit-transition: 0.5s ease all;
+    transition: 0.5s ease all;
+    padding: 0 14px;
+    background-color: #292929;
+    height: 100vh;
+    width: 100vw; }
+    @media (min-width: 900px) {
+      .header__nav {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        visibility: visible;
+        height: auto;
+        width: auto;
+        position: relative;
+        top: 0;
+        background-color: transparent; } }
+    .header__nav.open {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      visibility: visible; }
+    .header__nav .nav__list {
+      margin-top: 15px;
+      list-style-type: none; }
+      @media (min-width: 900px) {
+        .header__nav .nav__list {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          margin-top: 0; } }
+      .header__nav .nav__list li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 68px;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        @media (min-width: 900px) {
+          .header__nav .nav__list li {
+            margin-left: 55px; } }
+        .header__nav .nav__list li a {
+          font-family: 'PT Sans', sans-serif;
+          color: white;
+          font-size: 36px;
+          font-weight: 700;
+          text-transform: uppercase;
+          text-decoration: none; }
+          @media (min-width: 900px) {
+            .header__nav .nav__list li a {
+              font-size: 18px;
+              padding: 0 2px; } }
+          .header__nav .nav__list li a:hover {
+            border-bottom: 1px solid white;
+            -webkit-transition: 0.3 ease all;
+            transition: 0.3 ease all; }
+
+.main {
+  padding: 0 14px;
+  margin-top: 53px;
+  font-family: 'Open Sans', sans-serif; }
+  @media (min-width: 900px) {
+    .main {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      max-width: 1260px;
+      position: relative;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      margin-top: 12vh; } }
+  @media (min-width: 1600px) {
+    .main {
+      padding: 0 0; } }
+  .main__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    @media (min-width: 900px) {
+      .main__description {
+        margin-right: 21px;
+        width: 40%; } }
+    .main__description h1 {
+      font-family: 'PT Sans', sans-serif;
+      font-size: 24px;
+      color: #292929; }
+      @media (min-width: 900px) {
+        .main__description h1 {
+          font-size: 42px; } }
+    .main__description p {
+      margin-top: 27px;
+      font-size: 16px;
+      color: #292929; }
+      .main__description p:nth-of-type(2) {
+        margin-top: 23px; }
+      @media (min-width: 1200px) {
+        .main__description p {
+          font-size: 20px; }
+          .main__description p:nth-of-type(2) {
+            margin-top: 32px; } }
+  .main__image {
+    margin-top: 30px; }
+    .main__image img {
+      width: 100%;
+      max-width: 748px; }
