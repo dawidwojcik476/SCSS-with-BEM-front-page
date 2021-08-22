@@ -17,10 +17,11 @@
         position: relative;
         left: 50%;
         transform: translateX(-50%);
-        margin-top: 22.5vh;
+        margin-top: 10vh;
     }
     @media (min-width:1600px) {
         padding: 0 0;
+        margin-top: 22.5vh;
     }
 
 
