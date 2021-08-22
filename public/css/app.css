@@ -219,7 +219,7 @@
       margin-top: 2px; }
       @media (max-width: 500px) {
         .main__image img {
-          max-height: 185px; } }
+          max-height: 33vh; } }
       @media (min-width: 1600px) {
         .main__image img {
           width: 103%;
