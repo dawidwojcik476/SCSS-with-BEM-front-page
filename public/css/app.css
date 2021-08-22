@@ -17,6 +17,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: fixed;
   width: 100vw;
   height: 60px;
   background-color: #292929;
@@ -27,12 +28,15 @@
       padding: 0 5vw; } }
   @media (min-width: 1600px) {
     .header {
-      padding: 0 10vw; } }
+      padding: 0 9vw; } }
   .header__logo img {
     height: 21px; }
     @media (min-width: 768px) {
       .header__logo img {
-        height: 30px; } }
+        height: 30px;
+        position: relative;
+        left: 30px;
+        top: 2px; } }
   .header__hamburger {
     height: 100%;
     display: -webkit-box;
@@ -103,7 +107,8 @@
         width: auto;
         position: relative;
         top: 0;
-        background-color: transparent; } }
+        background-color: transparent;
+        left: -9px; } }
     .header__nav.open {
       -webkit-transform: translateX(0);
               transform: translateX(0);
@@ -146,7 +151,7 @@
 
 .main {
   padding: 0 14px;
-  margin-top: 53px;
+  margin-top: 113px;
   font-family: 'Open Sans', sans-serif; }
   @media (min-width: 900px) {
     .main {
@@ -161,7 +166,7 @@
       left: 50%;
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%);
-      margin-top: 12vh; } }
+      margin-top: 22.5vh; } }
   @media (min-width: 1600px) {
     .main {
       padding: 0 0; } }
@@ -176,14 +181,19 @@
     @media (min-width: 900px) {
       .main__description {
         margin-right: 21px;
-        width: 40%; } }
+        width: 40%;
+        position: relative;
+        top: 10px;
+        left: 8px; } }
     .main__description h1 {
       font-family: 'PT Sans', sans-serif;
       font-size: 24px;
       color: #292929; }
       @media (min-width: 900px) {
         .main__description h1 {
-          font-size: 42px; } }
+          font-size: 42px;
+          position: relative;
+          left: 1px; } }
     .main__description p {
       margin-top: 27px;
       font-size: 16px;
@@ -192,11 +202,16 @@
         margin-top: 23px; }
       @media (min-width: 1200px) {
         .main__description p {
-          font-size: 20px; }
+          font-size: 20px;
+          position: relative;
+          left: 5px;
+          line-height: 29px; }
           .main__description p:nth-of-type(2) {
             margin-top: 32px; } }
   .main__image {
-    margin-top: 30px; }
+    margin-top: 30px;
+    position: relative;
+    left: 3px; }
     .main__image img {
-      width: 100%;
-      max-width: 748px; }
+      width: 103%;
+      max-width: 752px; }

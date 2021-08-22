@@ -5,7 +5,7 @@
 }
 .main {
     padding: 0 14px;
-    margin-top: 53px;
+    margin-top: 113px;
     font-family: 'Open Sans', sans-serif;
     @include desktop {
         display: flex;
@@ -14,7 +14,7 @@
         position: relative;
         left: 50%;
         transform: translateX(-50%);
-        margin-top: 12vh;
+        margin-top: 22.5vh;
     }
     @media (min-width:1600px) {
         padding: 0 0;
@@ -27,6 +27,9 @@
         @include desktop {
             margin-right: 21px;
             width: 40%;
+            position: relative;
+            top:10px;
+            left: 8px
         }
        
         h1 {
@@ -35,6 +38,8 @@
             color: #292929;
             @include desktop {
                 font-size: 42px;
+                position: relative;
+                left:1px;
             }
         }
 
@@ -48,6 +53,9 @@
             }
             @media (min-width: 1200px){
                 font-size: 20px;
+                position: relative;
+                left:5px;
+                line-height: 29px;
                 &:nth-of-type(2) {
                     margin-top:32px;
                 }
@@ -57,10 +65,12 @@
 
     &__image {
         margin-top: 30px;
+        position: relative;
+        left:3px;
 
         img {
-            width: 100%;
-            max-width: 748px;
+            width: 103%;
+            max-width: 752px;
         }
     }
 
