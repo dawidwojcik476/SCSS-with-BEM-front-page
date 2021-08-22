@@ -5,7 +5,7 @@
 }
 .main {
     padding: 0 14px;
-    margin-top: 113px;
+    margin-top: 111px;
     font-family: 'Open Sans', sans-serif;
     @include desktop {
         display: flex;
@@ -65,12 +65,21 @@
 
     &__image {
         margin-top: 30px;
-        position: relative;
-        left:3px;
+        
+      
 
         img {
-            width: 103%;
-            max-width: 752px;
+            width: 100%;
+    max-width: 752px;
+    margin-top: 2px;
+    height: 185px;
+
+            @media (min-width:1600px) {
+                width: 103%;
+                position: relative;
+                left:3px;
+                height: auto;
+            }
         }
     }
 
