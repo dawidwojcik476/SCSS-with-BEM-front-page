@@ -159,7 +159,11 @@
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       max-width: 1260px;
+      min-height: 300px;
       position: relative;
       left: 50%;
       -webkit-transform: translateX(-50%);
@@ -211,8 +215,10 @@
     .main__image img {
       width: 100%;
       max-width: 752px;
-      margin-top: 2px;
-      height: 185px; }
+      margin-top: 2px; }
+      @media (max-width: 500px) {
+        .main__image img {
+          max-height: 185px; } }
       @media (min-width: 1600px) {
         .main__image img {
           width: 103%;

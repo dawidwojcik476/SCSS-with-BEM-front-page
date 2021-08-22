@@ -7,10 +7,13 @@
     padding: 0 14px;
     margin-top: 111px;
     font-family: 'Open Sans', sans-serif;
+    
     @include desktop {
         display: flex;
         align-items: center;
+        justify-content: center;
         max-width: 1260px;
+        min-height: 300px;
         position: relative;
         left: 50%;
         transform: translateX(-50%);
@@ -72,7 +75,9 @@
             width: 100%;
     max-width: 752px;
     margin-top: 2px;
-    height: 185px;
+    @media(max-width: 500px) {
+    max-height: 185px;
+}
 
             @media (min-width:1600px) {
                 width: 103%;
