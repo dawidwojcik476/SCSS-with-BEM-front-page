@@ -35,7 +35,7 @@
       .header__logo img {
         height: 30px;
         position: relative;
-        left: 30px;
+        left: 22px;
         top: 2px; } }
   .header__hamburger {
     height: 100%;
@@ -106,7 +106,7 @@
         position: relative;
         top: 0;
         background-color: transparent;
-        left: -9px; } }
+        left: -21px; } }
     .header__nav.open {
       -webkit-transform: translateX(0);
               transform: translateX(0);
@@ -186,8 +186,8 @@
         margin-right: 21px;
         width: 40%;
         position: relative;
-        top: 10px;
-        left: 8px; } }
+        top: 9px;
+        left: -2px; } }
     .main__description h1 {
       font-family: 'PT Sans', sans-serif;
       font-size: 24px;
@@ -224,5 +224,5 @@
         .main__image img {
           width: 103%;
           position: relative;
-          left: 3px;
+          left: -8px;
           height: auto; } }
